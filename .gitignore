@@ -1,3 +1,8 @@
+Project-iOS/DerivedData/
+Project/DerivedData/
+*adam.*
+*zack.*
+*bruno.*
 build
 *.mode1v3
 *.mode2v3
