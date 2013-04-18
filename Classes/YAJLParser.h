@@ -142,7 +142,7 @@ typedef NSUInteger YAJLParserStatus; //!< Status of the last parse event
   
   yajl_handle handle_;
   
-  id<YAJLParserDelegate> delegate_; // weak
+  id<YAJLParserDelegate> __unsafe_unretained delegate_; // weak
     
   YAJLParserOptions parserOptions_;
 
@@ -150,7 +150,7 @@ typedef NSUInteger YAJLParserStatus; //!< Status of the last parse event
 }
 
 @property (assign, nonatomic) id <YAJLParserDelegate> delegate;
-@property (readonly, retain, nonatomic) NSError *parserError;
+@property (readonly, strong, nonatomic) NSError *parserError;
 @property (readonly, nonatomic) YAJLParserOptions parserOptions;
 
 /*!
